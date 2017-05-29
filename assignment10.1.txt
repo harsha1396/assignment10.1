@@ -1,0 +1,30 @@
+1)Explain in brief the need of hive:-
+
+Apache Hive supports analysis of large datasets stored in Hadoop's HDFS and compatible file systems. 
+It provides an SQL-like query language called HiveQL with schema on read and converts queries to MapReduce and Spark jobs. 
+All three execution engines can run in Hadoop YARN. 
+To accelerate queries it also provides indexes with bitmap indexes.
+Hive supports extending the UDF set to handle use-cases not supported by built-in functions.
+
+2)Is Hive suitable to be used for OLTP systems?Explain in brief:-
+
+Hive does not provide insert and update functions at the row level.
+Hence it is not suitable to be used for OLTP systems.
+
+3)What is a metastore in Hive?
+
+All Hive implementations need a metastore service, where it stores metadata. 
+It is implemented using tables in a relational database.
+It provides clients access to this information using the metastore service API. 
+By default it stores meta data in Derby database but we can also store them in MySql,oracle depending upon the system projects.
+
+4)Can we run unix shell commands from hive?Give 5 examples and share the screenshot:-
+
+Yes,we can run unix shell commands from hive by placing the prefix "!" to the unix command.
+For example,to run ls in hive shell place prefix "!" before ls like !ls.
+
+5)Hive can process any type of data formats?Explain in brief:-
+
+Hive can process many file formats such as text file, sequence file, RC file, ORC file.
+Hive uses different SerDe interface to process such data.
+Hive by default handles only structured data. 
